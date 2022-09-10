@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  /* width: 100%; */
+  background-image: url('bg_bottom.png');
+  background-repeat: repeat;
+    background-size: cover;
+
+    /* background-attachment: fixed;
+    backdrop-filter: blur(4px); */
+  
+}
+
+
+.logo{
+    position: absolute;
+  
+}
+.logo img{
+   width: 30%;
+   margin-top: -22px;
+}
+nav {
+  /* background-color: navy; */
+  
+  width: 100%;
+  height: 80px;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+  }
+nav ul li {
+
+  display: inline-block;
+ line-height: 80px;
+ margin: -20px 15px;
+
+}
+
+nav ul li a {
+    position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: #f7f7f9;
+}
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .2s linear;
+}
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.boxes{
+    position: absolute;
+    display: inline-flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ .boxes .box {
+    /* align-items: center; */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg,#101040,hsla(0,0%,100%,0));
+    border: 1px solid hsla(0,0%,100%,.18);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    margin: 80px 80px;
+    display: inline-flex;
+    width: 30vw;
+    height: 35vw; 
+    overflow: hidden;
+   
+ }
+
+ .boxes img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-left: 16px;
+    /* height: auto; */
+ }
+.box {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  align-items: center;
+  text-align: start;
+  align-items: flex-start; 
+}
+.box .about-text{
+    /* position: absolute; */
+    margin: 20vw 15px;
+    line-height: 23px;
+   
+}
+.box h2{
+   
+   position: absolute;
+  
+    color: rgb(80, 227, 205);
+    bottom: 40%;
+}
+.box h4{
+    position: absolute;
+    color: #f67947;
+    bottom: 50%;
+
+}
+.box p{
+   position: absolute;
+   bottom: 20%;
+    color: #f7f7f9;
+}
+ .btn{
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    font-size: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 2%;
+    background: hues;
+    background-color: rgb(7, 11, 248);
+    color: rgb(225, 225, 225);
+    font-weight: bold;
+    margin: 15px;
+    /* border: 4px solid rgb(105, 244, 6); */
+
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(2, 6, 200);
+}
+
+.div2{
+    background-image: url('bg.bottom.png');
+}
+
+.checkbtn{
+    position: relative;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  @media (max-width:900px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+  }
+  @media (max-width:800px) {
+   .checkbtn{
+    display: block;
+   }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+   }
+   nav ul li{
+    display: block;
+    margin: -18px 0;
+    line-height: 30px;
+
+   }
+   nav ul li a{
+    font-size: 20px;
+   }
+   a:hover,a.active{
+    background: none;
+    color:white;
+   }
+   #check:checked ~  ul{
+    left: 0;
+   }
+   .logo img{
+    width: 1vw;
+    height: 1vh;
+    margin: 10px 0;
+   }
+   .boxes{
+    /* position: absolute; */
+    display: block;
+    margin: 80px 80px;
+   }
+   .boxes .box{
+    width: 120vw;
+    height: 190vw;
+   }
+   .about-text h2{
+    position: absolute;
+    margin: 10% 0;
+   }
+   .about-text h4{
+    position: absolute;
+    margin: 12% 0;
+   }
+  }
