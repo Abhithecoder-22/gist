@@ -118,6 +118,7 @@ nav ul li a:hover:before{
 }
 .box .about-text{
     /* position: absolute; */
+    /* position: relative; */
     margin: 20vw 15px;
     line-height: 23px;
    
@@ -170,6 +171,7 @@ nav ul li a:hover:before{
 
 .checkbtn{
     position: relative;
+    /* position: absolute; */
     font-size: 30px;
     color: white;
     float: right;
@@ -191,6 +193,9 @@ nav ul li a:hover:before{
   @media (max-width:800px) {
    .checkbtn{
     display: block;
+   }
+   body{
+    width: 100%;
    }
   nav ul{
     position: fixed;
@@ -223,13 +228,20 @@ nav ul li a:hover:before{
     margin: 10px 0;
    }
    .boxes{
-    /* position: absolute; */
-    display: block;
-    margin: 80px 80px;
+    /* position: relative; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80vh 40vw;
+    /* top: -10%; */
+    /* justify-content: center; */
    }
    .boxes .box{
-    width: 120vw;
-    height: 190vw;
+    /* position: relative; */
+    /* width: 140vw; */
+    width: 150vw;
+    height: 100vh;
    }
    .about-text h2{
     position: absolute;
